@@ -2,14 +2,14 @@ import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import skill1 from "../assets/img/skill1.png";
-import skill2 from "../assets/img/skill2.jpg";
+import skill2 from "../assets/img/skill2.png";
 import skill3 from "../assets/img/skill3.png";
-import skill4 from "../assets/img/skill4.jpg";
+import skill4 from "../assets/img/skill4.png";
+import colorSharp from "../assets/img/colorSharp.png";
 
 export const Skills = () => {
     const responsive = {
         superLargeDesktop: {
-            // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 5
         },
@@ -57,6 +57,7 @@ export const Skills = () => {
                     </Col>
                 </Row>
             </Container>
+            <img className="background-image-left" src={colorSharp} alt="Image" />
         </section>
     )
 }
