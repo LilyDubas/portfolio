@@ -5,7 +5,7 @@ import skill1 from "../assets/img/skill1.png";
 import skill2 from "../assets/img/skill2.png";
 import skill3 from "../assets/img/skill3.png";
 import skill4 from "../assets/img/skill4.png";
-import colorSharp from "../assets/img/colorSharp.png";
+
 
 export const Skills = () => {
     const responsive = {
@@ -28,7 +28,7 @@ export const Skills = () => {
     };
 
     return (
-        <section className="Skills">
+        <section className="Skills" id="skills">
             <Container>
                 <Row>
                     <Col>
@@ -57,7 +57,7 @@ export const Skills = () => {
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-left" src={colorSharp} alt="Image" />
+
         </section>
     )
 }

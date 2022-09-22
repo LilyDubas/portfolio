@@ -1,9 +1,8 @@
 import { Nav, Row, Col, Container, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from "../assets/img/colorSharp2.png";
-import storybots from "../assets/img/storybotsSized.png";
-import escapeOfRapunzel from "../assets/img/escapeOfRapunzelSized.png";
-import Stience from "../assets/img/StienceSized.png";
+import project1 from "../assets/img/escapeOfRapunzelSized.png";
+import project2 from "../assets/img/nightskySized.png";
+import project3 from "../assets/img/storybotsSized.png";
 
 export const Projects = () => {
 
@@ -11,17 +10,17 @@ export const Projects = () => {
         {
             title: "Illustration monochrome",
             description: "Escape of Rapunzel",
-            imgUrl: escapeOfRapunzel,
+            imgUrl: project1,
         },
         {
             title: "Illustration d'affiche",
-            description: "inspired by The Storybots",
-            imgUrl: storybots,
+            description: "Balade Nocturne",
+            imgUrl: project2,
         },
         {
             title: "Fan Arts",
-            description: "Princess Tiabeanie",
-            imgUrl: Stience,
+            description: "inspired by The Storybots",
+            imgUrl: project3,
         }
     ]
     return (
@@ -57,14 +56,12 @@ export const Projects = () => {
                                         }
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="second">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper, mauris eget scelerisque luctus, libero quam lobortis nisi, non commodo magna augue at purus.</Tab.Pane>
-                                <Tab.Pane eventKey="third">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper, mauris eget scelerisque luctus, libero quam lobortis nisi, non commodo magna augue at purus.</Tab.Pane>
+
                             </Tab.Content>
                         </Tab.Container>
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-right" src={colorSharp2} />
         </section>
     )
 }

@@ -64,7 +64,7 @@ nav.navbar {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 9999;
+    z-index: 2;
     transition: 0.32s ease-in-out;
 }
 
@@ -346,13 +346,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin: 0 auto 15px auto;
 }
 
-.background-image-left {
-    top: 28%;
-    position: absolute;
-    bottom: 0;
-    width: 40%;
-    z-index: -4;
-}
+
 
 /************ Projects Css ************/
 .project {
@@ -380,7 +374,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project .nav.nav-pills {
     width: 72%;
     margin: 0 auto;
-    border-radius: 50px;
+
     background-color: rgb(255 255 255 / 10%);
     overflow: hidden;
 }
@@ -395,7 +389,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     padding: 17px 0;
     color: #fff;
     width: 100%;
-    font-size: 17px;
+    font-size: 1.75vw;
     letter-spacing: 0.8px;
     font-weight: 500;
     position: relative;
@@ -424,28 +418,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     border: 1px solid rgba(255, 255, 255, 1);
 }
 
-.nav-link#projects-tabs-tab-first {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 55px 0px 0px 55px;
-}
-
-.nav-link#projects-tabs-tab-second {
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.nav-link#projects-tabs-tab-third {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 0 55px 55px 0;
-}
 
 .proj-imgbx {
     position: relative;
-    border-radius: 30px;
+    border-radius: 0%;
     overflow: hidden;
     margin-bottom: 24px;
     width: 100%;
-    height: 50%;
+    height: 60%;
+    padding-top: 25%;
 }
 
 .proj-imgbx::before {
@@ -460,6 +441,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-imgbx:hover::before {
     height: 100%;
+
 }
 
 .proj-txtx {
@@ -492,11 +474,178 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     letter-spacing: 0.8px;
 }
 
-.background-image-right {
-    top: 20%;
+/************ GALLERY ********/
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+    padding: 2%;
+}
+
+@media (max-width: 991px) {
+    .gallery {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+}
+
+
+.img-projects {
+    padding: 3%;
+    z-index: 9999;
+}
+
+h2 {
+    text-align: center;
+}
+
+/************ Contact Form Css ************/
+.contact {
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    padding: 60px 0 100px 0;
+
+}
+
+.contact img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.contact h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    color: #fff;
+    margin: 0 0 8px 0;
+    padding: 18px 26px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    transition: 0.3s ease-in-out;
+}
+
+#messageForm {
+    width: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    color: #fff;
+    margin-left: 1%;
+    padding: 18px 26px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    transition: 0.3s ease-in-out;
+
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    background: rgba(255, 255, 255, 1);
+    color: #121212;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.contact form input:focus::placeholder,
+.contact form textarea:focus::placeholder {
+    color: #121212;
+    opacity: 0.8;
+}
+
+.contact form button {
+    font-weight: 700;
+    color: #000;
+    background-color: #fff;
+    padding: 14px 48px;
+    font-size: 18px;
+    margin-top: 25px;
+    border-radius: 0;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.contact form button span {
+    z-index: 1;
+    position: relative;
+}
+
+.contact form button:hover {
+    color: #fff;
+}
+
+.contact form button::before {
+    content: "";
+    background: #121212;
+    width: 0;
+    height: 100%;
     position: absolute;
-    bottom: 0;
-    width: 35%;
-    right: 0;
-    z-index: -4;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.contact form button:hover::before {
+    width: 100%;
+}
+
+/************ Footer Css ************/
+.footer {
+    padding: 5%;
+    background-image: "";
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer img {
+    width: 16%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#footer-logo {
+    width: 70%;
+    margin-left: 10%;
+}
+
+#p-icon {
+    width: 8%;
+}
+
+.footer p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #B8B8B8;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
 }
